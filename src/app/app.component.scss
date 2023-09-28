@@ -1,0 +1,62 @@
+
+  nav {
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 5px 0px;
+  border-bottom: 1px solid red;
+
+    .logoli {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-self: flex-start;
+      padding-left: 20px;
+      .logo {
+        height: 40px;
+        width: 130px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      list-style-type: none;
+      gap: 20px;
+      justify-content: flex-end;
+
+      li {
+        position: relative; // Add this line to make li elements relative for dropdown
+        cursor: pointer;
+        &:hover{
+          color: red;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%; // Position the dropdown below the parent li
+          left: 0;
+          padding: 20px;
+          background-color: white;
+          min-width: 220px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          color: black;
+
+          li {
+            padding-bottom: 20px;
+            display: block;
+          }
+        }
+
+        &:hover .dropdown-content {
+          display: block; // Show the dropdown when hovering over the parent li
+        }
+      }
+    }
+  }
+
+
