@@ -2,9 +2,11 @@ $light_grey_color: white;
 $button-border: #dedede;
 $white_color: #ffffff;
 $red_color: #ea454b;
+$font-family: 'Cairo', sans-serif;
 .container-fluid {
   display: flex;
   justify-content: center;
+  font-family: $font-family;
   .login-left {
     display: flex;
     flex-direction: column;
@@ -88,7 +90,7 @@ $red_color: #ea454b;
     }
   }
   .login-right {
-    background-color: yellow;
+    // background-color: yellow;
     width: 50%;
     .login-img {
       width: 100%;
