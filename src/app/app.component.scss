@@ -28,6 +28,9 @@
       list-style-type: none;
       gap: 20px;
       justify-content: flex-end;
+      .active{
+        color:red;
+      }
 
       li {
         position: relative; // Add this line to make li elements relative for dropdown
@@ -35,6 +38,7 @@
         &:hover{
           color: red;
         }
+
         .dropdown-content {
           display: none;
           position: absolute;
@@ -55,6 +59,8 @@
         &:hover .dropdown-content {
           display: block; // Show the dropdown when hovering over the parent li
         }
+
+
       }
     }
   }
