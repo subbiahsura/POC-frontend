@@ -1,19 +1,64 @@
-.file-upload-container {
-  border: 2px dashed #ccc;
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-}
 
-.drag-text {
-  font-size: 1.2rem;
-  color: #333;
-}
+$font_family : 'Cairo', sans-serif;
+.container-fluid{
+font-family: $font_family;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+.whole-content{
+  padding: 30px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  .left-content{
+    width: 500px;
+    // border: 2px solid red;
+    height: 600px;
+    .imagecontainer{
+      object-fit: cover;
+    .clipart{
 
-.uploaded-files {
-  margin-top: 20px;
-}
+      object-fit: fill;
+    }
+  }
+  }
+  .right-content{
+    // width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    .file-upload-container {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      .drag-text {
+        font-size: 1.2rem;
+        color: #333;
+      }
 
-button {
-  margin-top: 10px;
+      .uploaded-files {
+         margin-top: 20px;
+      }
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+.buttons{
+  display: flex;
+  gap: 30px;
+  button{
+    padding: 10px 40px 10px 40px;
+  }
+}
 }

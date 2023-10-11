@@ -1,1 +1,75 @@
-<p>donate works!</p>
+<div class="container-fluid">
+  <div class="heading">
+    <h4>Donate Blood <i class="bi bi-droplet-fill"></i></h4>
+    <p>Be someone's lifeline</p>
+  </div>
+  <h3><a>Need Blood?</a></h3>
+<form class="donate-form">
+  <div class="content">
+      <div class="input-fields">
+        <label for="firstname">FirstName</label>
+        <input type="text" id="firstname">
+      </div>
+      <div class="input-fields">
+        <label for="lastname">LastName</label>
+        <input type="text" id="lastname">
+      </div>
+      <div class="input-fields">
+        <label for="bloodgroup">Blood Group</label>
+        <select >
+          <option  *ngFor="let blood of bloodGroups" value="{{blood}}">{{blood}}</option>
+        </select>
+      </div>
+      <div class="input-fields">
+        <label for="DOB">Date Of Birth</label>
+        <input type="date" id="DOB">
+      </div>
+      <div class="input-fields">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone">
+      </div>
+      <div class="input-fields">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+      <div class="input-fields">
+        <label for="Address">Address</label>
+        <textarea name="" id="Address" cols="28" rows="3"></textarea>
+      </div>
+  </div>
+  <div class="content">
+    <div class="input-fields">
+      <label for="state">State</label>
+      <select >
+        <option  *ngFor="let state of States" value="{{state}}">{{state}}</option>
+      </select>
+    </div>
+    <div class="input-fields">
+      <label for="district">District</label>
+      <input type="text" id="district">
+    </div>
+    <div class="input-fields">
+      <label for="city">City</label>
+      <input type="text" id="city">
+    </div>
+    <div class="input-fields">
+      <label for="pincode">Pincode</label>
+      <input type="text" id="pincode">
+    </div>
+    <div class="input-fields">
+      <label for="occupation">Occupation</label>
+      <input type="text" id="occupation">
+    </div>
+    <div class="previous-fields">
+      <label for="email">Have You Donated during 6 Months?</label>
+      <div class="radioinputs">
+        <div class="radiobuttons"><input type="radio" id="yes" name="option" value="yes"><label for="yes">YES</label></div>
+        <div class="radiobuttons"><input type="radio" id="no" name="option" value="no"><label for="no">NO</label></div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-danger">Donate</button>
+    </div>
+  </div>
+</form>
+</div>
