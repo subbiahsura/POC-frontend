@@ -1,43 +1,128 @@
 
-<body>
-    <div class="container-fluid">
-        <div class="register-left">
-            <img class="register-img" src="/assets/images/register-img.jpg" alt="" />
-          </div>
-      <div class="register-right">
-        <div class="register-content">
-          <h2>Get Started</h2>
-          <p>Create an Account</p>
-          <form>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Full Name" />
-              <input type="text" class="form-control" placeholder="Email" />
-              <input
-                type="password"
-                class="form-control"
-                placeholder="Password"
-              />
-              <input type="text" class="form-control" placeholder="Confirm Password" />
+  <div class="container-fluid">
+    <div class="register-left">
+      <img class="register-img" src="/assets/images/register-img.jpg" alt="" />
+    </div>
+    <div class="register-right">
+      <div class="register-content">
+        <h2>Get Started</h2>
+        <p>Create an Account</p>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              formControlName="firstName"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && registerForm.controls['firstName'].invalid,
+                'is-valid':
+                  submitted && registerForm.controls['firstName'].valid
+              }"
+            />
+            <div class="invalid-feedback">
+              <div>First Name is required</div>
             </div>
-            <button type="submit" class="btn btn-sm btn-block">Signup</button>
-          </form>
-          <div class="line"></div>
-          <div class="social-media-icon">
-            <button>
-              <img src="/assets/images/google.png" alt="google" />
-              <span>Google</span>
-            </button>
-            <button>
-              <img src="/assets/images/facebook.png" alt="fb" /><span
-                >Facebook</span
-              >
-            </button>
           </div>
-        </div>
-        <div class="head">
-          <h6> Have an account? <a routerLink="/Login">Signin!</a></h6>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last Name"
+              formControlName="lastName"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && registerForm.controls['lastName'].invalid,
+                'is-valid': submitted && registerForm.controls['lastName'].valid
+              }"
+            />
+            <div class="invalid-feedback">
+              <div>Last Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && registerForm.controls['email'].invalid,
+                'is-valid': submitted && registerForm.controls['email'].valid
+              }"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  submitted &&
+                  registerForm.controls['email'].hasError('required')
+                "
+              >
+                Email is required
+              </div>
+              <div
+                *ngIf="
+                  submitted && registerForm.controls['email'].hasError('email')
+                "
+              >
+                Invalid Email
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+              [ngClass]="{
+                'is-invalid':
+                  submitted && registerForm.controls['password'].invalid,
+                'is-valid': submitted && registerForm.controls['password'].valid
+              }"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  submitted &&
+                  registerForm.controls['password'].hasError('required')
+                "
+              >
+                Password is required
+              </div>
+              <div
+                *ngIf="
+                  submitted &&
+                  registerForm.controls['password'].hasError('minlength')
+                "
+              >
+                Password must be atleast 6 characters
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-sm btn-block">Signup</button>
+        </form>
+        <div class="line"></div>
+        <div class="social-media-icon">
+          <button>
+            <img src="/assets/images/google.png" alt="google" />
+            <span>Google</span>
+          </button>
+          <button>
+            <img src="/assets/images/facebook.png" alt="fb" /><span
+              >Facebook</span
+            >
+          </button>
         </div>
       </div>
-
+      <div class="head">
+        <h6>Have an account? <a routerLink="/Login">Signin!</a></h6>
+      </div>
     </div>
-  </body>
+  </div>
+

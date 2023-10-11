@@ -5,6 +5,8 @@ import { DonateComponent } from './donate/donate.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PrescriptionReaderComponent } from './prescription-reader/prescription-reader.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,14 @@ const routes: Routes = [
   {
     path:"PrescriptionReader",
     component:PrescriptionReaderComponent
+  },
+  {
+    path:"Forgot-password",
+    component:ForgotPasswordComponent
+  },
+  {
+    path:"Reset-password",
+    component:ResetPasswordComponent
   }
 ];
 

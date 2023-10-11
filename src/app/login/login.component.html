@@ -4,14 +4,52 @@
       <div class="login-content">
         <h2>Welcome Back</h2>
         <p>Login into your Account</p>
-        <form>
+        <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && submit()">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email" />
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Password"
-            />
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email"
+                name="email"
+                [(ngModel)]="formdata.email"
+                #email="ngModel"
+                [ngClass]="{
+                  'is-invalid': f.submitted && email.invalid,
+                  'is-valid': f.submitted && email.valid
+                }"
+                email
+                required
+              />
+              <div class="invalid-feedback">
+                <div *ngIf="email.hasError('required')">Email is required</div>
+                <div *ngIf="email.hasError('email')">Invalid Email</div>
+              </div>
+            </div>
+            <div>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Password"
+                name="password"
+                #password="ngModel"
+                [(ngModel)]="formdata.password"
+                [ngClass]="{
+                  'is-invalid': f.submitted && password.invalid,
+                  'is-valid': f.submitted && password.valid
+                }"
+                required
+                minlength="5"
+              />
+              <div class="invalid-feedback">
+                <div *ngIf="password.hasError('required')">
+                  Password is required
+                </div>
+                <div *ngIf="password.hasError('minlength')">
+                  Password must be at least 6 characters
+                </div>
+              </div>
+            </div>
           </div>
           <div class="form-check form-switch">
             <input
@@ -19,7 +57,7 @@
               class="form-check-input"
               role="switch"
             /><span>Remember me</span>
-            <a href="">Forgot Password?</a>
+            <a routerLink="/Forgot-password">Forgot Password?</a>
           </div>
           <button type="submit" class="btn btn-sm btn-block">Login</button>
         </form>

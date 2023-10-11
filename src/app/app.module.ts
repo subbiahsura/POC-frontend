@@ -10,6 +10,10 @@ import { RegisterComponent } from './register/register.component';
 import { PrescriptionReaderComponent } from './prescription-reader/prescription-reader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +21,17 @@ import { MatButtonModule } from '@angular/material/button';
     DonateComponent,
     LoginComponent,
     RegisterComponent,
-    PrescriptionReaderComponent
+    PrescriptionReaderComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
