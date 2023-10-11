@@ -1,0 +1,109 @@
+$light_grey_color: white;
+$border: #A0A0A0;
+$white_color: #ffffff;
+$red_color: #ea454b;
+$font-family: 'Cairo', sans-serif;
+.container-fluid{
+  padding: 35px ;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family;
+  align-items: center;
+  gap: 10px;
+  .heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4{
+      font-size: 20px;
+      color: $red_color;
+      margin: 0;
+    }
+    p{
+      color: green;
+    }
+  }
+  .donate-form{
+    display: flex;
+    gap: 40px;
+    // border: 1px solid $red_color;
+    border-left:  1px solid $red_color;
+    border-right:  1px solid $red_color;
+    // border-bottom:  1px solid $red_color;
+    padding: 30px;
+    // align-items: center;
+    .content{
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      .input-fields{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        input[type=text],[type=tel],[type=date],[type=email],select{
+          width: 220px;
+          height: 30px;
+          outline: none;
+          border: 0;
+          border-bottom: 1px solid $border;
+        }
+        textarea{
+          width: 220px;
+          height: 60px;
+          resize: none;
+          outline: 0;
+          border: 0;
+          border-bottom: 1px solid $border;
+        }
+      }
+      .previous-fields{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .radioinputs{
+          display: flex;
+          gap: 30px;
+          justify-content: center;
+          // border: 2px solid green;
+          .radiobuttons{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            // justify-content: center;
+
+            input[type=radio] {
+              cursor: pointer;
+              appearance: none;
+              width: 15px;
+              height: 15px;
+              background-color: $white_color;
+              border: 1px solid $red_color;
+              border-radius:50%;
+           }
+           input[type=radio]:checked {
+            background-color: $red_color;
+            width: 15px;
+            height: 15px;
+            outline: 1px solid  $red_color;
+            border: 3px solid $white_color;
+         }
+          }
+        }
+      }
+      .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        button{
+          width: 100%;
+          background-color: $red_color;
+          &:hover{
+            background-color: #ee1e25;
+          }
+        }
+      }
+    }
+  }
+}
