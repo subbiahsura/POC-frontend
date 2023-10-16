@@ -1,0 +1,147 @@
+$light_grey_color : #ececec;
+$background_greycolor:#f5f5f5;
+$white_color:#ffffff;
+$red_color: #ea454b;
+$shadow_color:rgb(220, 220, 220);
+$font-family: 'Cairo', sans-serif;
+
+.container{
+  font-family: $font-family;
+  .pictures{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .coverphoto{
+      background-image: url("/assets/Profile/NewCoverPic.jpg");
+      background-size: cover;
+      display: flex;
+      width: 100%;
+      height: 170px;
+      object-fit: contain;
+    }
+      .profilecontent{
+        // border-bottom: 1px solid $red_color;
+        padding-bottom: 50px;
+        .profilephoto{
+          display: flex;
+          justify-content: center;
+           margin-top: -190px;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          align-items: center;
+          background-image: url("/assets/Profile/avatarimg.jpg");
+          background-size: contain;
+          .model{
+           height: 200px;
+           width: 200px;
+           object-fit: cover;
+           border-radius: 50%;
+           border: 7px solid $white_color;
+          }
+          .camera-addprofile{
+            // border: 2px solid green;
+            margin-top: 10px;
+            border-radius: 50%;
+            background-color: #000000;
+            opacity: 0.2;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input[type=file]{
+              display: none;
+            }
+            label{
+              color:white;
+              font-size: 45px;
+              background-color: transparent;
+              border: 0;
+            }
+
+            &:hover{
+              opacity: 0.4;
+            }
+          }
+        }
+        width: 100%;
+        height: 190px;
+        background-color: $white_color;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        // padding: 50px;
+        padding-top: 30px;
+
+        .completingprofile{
+          button{
+            color: white;
+            border: 0;
+            background-color: $red_color;
+            padding: 10px 40px;
+          }
+        }
+        .professionaldetails{
+          height: 140px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          gap: 20px;
+          .card{
+            background-image: url("/assets/Profile/patternbackground.jpg");
+            background-size: contain;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .cardcontent{
+              label{
+                font-weight: 700;
+                font-size: 15px;
+              }
+              padding: 20px;
+            }
+            .cardbutton{
+              button{
+                padding: 7px 40px;
+                background: $red_color;
+                border: 0;
+                color:$white_color
+              }
+            }
+          }
+        }
+
+      }
+
+  }
+
+}
+.form-label{
+  font-size: 15px;
+  color: $red_color;
+}
+.profiletextcontent{
+// background-color: grey;
+// background-color: $red_color;
+border-left: 3px solid $red_color;
+border-right: 3px solid $red_color;
+margin-top: 10px;
+.profiledetails{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  // align-items: center;
+  background-color: white;
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+}
+

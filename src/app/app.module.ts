@@ -1,29 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DonateComponent } from './donate/donate.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { PrescriptionReaderComponent } from './prescription-reader/prescription-reader.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ProfileComponent } from './profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CompletingProfileDailogComponent } from './completing-profile-dailog/completing-profile-dailog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UserLoginRegisterProfileModule } from './user-login-register-profile/user-login-register-profile.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DonateComponent,
-    LoginComponent,
-    RegisterComponent,
-    PrescriptionReaderComponent,
-    ForgotPasswordComponent,
-    ResetPasswordComponent
+    ProfileComponent,
+    CompletingProfileDailogComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +28,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatDialogModule,
+    UserLoginRegisterProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]

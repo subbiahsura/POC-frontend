@@ -1,0 +1,112 @@
+
+  <div class="container">
+    <div class="pictures">
+      <div class="coverphoto">
+        <!-- <img src="\assets\Profile\NewCoverPic.jpg" class="coverimg"> -->
+      </div>
+      <div class="profilecontent">
+        <div class="profilephoto">
+          <img [src]="imageUrl"  *ngIf="imageUrl"class="model">
+          <div class="camera-addprofile"  *ngIf="!imageUrl">
+            <input type="file"  id="addprofile" accept=".jpg, .jpeg, .png"  (change)="onFileSelected($event)">
+            <label for="addprofile"><i class="bi bi-camera"></i></label>
+          </div>
+        </div>
+        <div class="personaldetails">
+          <h2>Michael Johnson</h2>
+            <p>michaeljohnson@gmail.com</p>
+        </div>
+        <div class="completingprofile">
+          <button (click)="openDialog()"><i class="bi bi-person-check"></i> Complete your profile</button>
+        </div>
+        <div class="professionaldetails">
+          <div class="card">
+            <div class="cardcontent">
+              <label>Check your Reports</label>
+            </div>
+
+           <div class="cardbutton">
+            <button>My Reports</button>
+           </div>
+          </div>
+          <div class="card">
+            <div class="cardcontent">
+              <label>Analyse Me</label>
+            </div>
+
+            <div class="cardbutton">
+              <button>Analyse</button>
+             </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- <div class="profiledetails" *ngFor="let userdata of userdata">
+        <label for="">{{userdata.Dateofbirth}}</label>
+        {{userdata.Bloodgroup}}
+        {{userdata.gender}}
+        {{userdata.PhoneNumber}}
+        {{userdata.address}}
+        {{userdata.State}}
+        {{userdata.District}}
+        {{userdata.city}}
+        {{userdata.pincode}}
+        {{userdata.height}}
+        {{userdata.weight}}
+      </div> -->
+
+
+    </div>
+    <!-- {{userdata|json}} -->
+    <div class="profiletextcontent p-2 " *ngIf="userdata" >
+      <div class="profiledetails"  *ngFor="let userdata of userdata">
+        <div class="content">
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-cake2-fill"></i> Date Of Birth</label>
+            <label class="form-label-input">{{userdata.Dateofbirth |date }}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-droplet-fill"></i> Blood Group</label>
+            <label class="form-label-input">{{userdata.Bloodgroup}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-gender-male"></i> Gender</label>
+            <label class="form-label-input">{{userdata.gender}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-telephone-fill"></i> Phone Number</label>
+            <label class="form-label-input">{{userdata.PhoneNumber}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-rulers"></i> Height</label>
+            <label class="form-label-input">{{userdata.height}}</label>
+          </div>
+        </div>
+        <div class="content">
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-speedometer2"></i> Weight</label>
+            <label class="form-label-input">{{userdata.weight}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-geo-fill"></i> Location</label>
+            <label class="form-label-input">{{userdata.address}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-globe-asia-australia"></i> State</label>
+            <label class="form-label-input">{{userdata.State}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-radar"></i> District</label>
+            <label class="form-label-input">{{userdata.District}}</label>
+          </div>
+          <div class="fields mb-2 d-flex gap-3">
+            <label class="form-label"><i class="bi bi-pin-map-fill"></i> City</label>
+            <label class="form-label-input">{{userdata.city}}</label>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </div>
+
+

@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "profiledata": [
+    {
+      "Dateofbirth": "2000-07-13",
+      "Bloodgroup": "A_positive A+",
+      "gender": "Male",
+      "PhoneNumber": "09443527674",
+      "address": "2/102 Chruch street",
+      "State": "Assam - Dispur",
+      "District": "tuticorin",
+      "city": "dsfdsfds",
+      "pincode": 585242547,
+      "height": 170,
+      "weight": 60,
+      "id": 1
+    }
+  ]
+}

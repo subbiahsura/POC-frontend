@@ -1,18 +1,20 @@
-<nav class="container-fluid">
-  <a class="logoli"><img src="\assets\images\POC_SMALLLOGO.png" alt="" class="logo"></a>
+<nav class="navbar bg-body-tertiary">
+<div class="container-fluid">
+  <a class="logoli navbar-brand"><img src="\assets\images\POC_SMALLLOGO.png" alt="" class="logo"></a>
   <ul>
     <li routerLinkActive="active" routerLink="/Home"><i class="bi bi-house"></i>&nbsp;HOME</li>
     <li class="dropdown" routerLinkActive="active">
       PRODUCTS&nbsp;<i class="bi bi-chevron-down"></i>
       <ul class="dropdown-content">
         <li routerLink="/PrescriptionReader" routerLinkActive="active"><i class="bi bi-file-earmark-break"></i>&nbsp;Prescription Reader</li>
-        <li><i class="bi bi-files"></i>&nbsp;Blood report Analyser</li>
+        <li routerLink="/bloodreportanalyser" routerLinkActive="active"><i class="bi bi-files"></i>&nbsp;Blood report Analyser</li>
         <li><i class="bi bi-pc-display"></i>&nbsp;Xray Analyser</li>
       </ul>
     </li>
     <li routerLinkActive="active" routerLink="/Donate"><i class="bi bi-droplet-fill"></i>&nbsp;DONATE</li>
-    <li routerLinkActive="active"><i class="bi bi-buildings"></i>&nbsp;ABOUT US</li>
+    <li routerLinkActive="active" routerLink="/profile"><i class="bi bi-buildings"></i>&nbsp;ABOUT US</li>
     <li routerLinkActive="active" routerLink="/Login"><i class="bi bi-person-circle"></i>&nbsp;LOGIN</li>
   </ul>
+</div>
 </nav>
 <router-outlet></router-outlet>

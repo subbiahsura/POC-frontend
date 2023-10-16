@@ -11,6 +11,6 @@ export class LoginComponent {
   // password:any="";
 submit(){
   console.log("Forms submitted!");
-  console.log(this.formdata);  
+  console.log(this.formdata);
 }
 }

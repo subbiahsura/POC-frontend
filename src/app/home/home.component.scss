@@ -7,10 +7,10 @@ $font-family: 'Cairo', sans-serif;
   // padding-top: 30px;
   // background-color: $light_grey_color;
   font-family: $font-family;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-evenly;
+  // flex-wrap: wrap;
   align-items: center;
   .leftpane{
     display: flex;
@@ -25,15 +25,15 @@ $font-family: 'Cairo', sans-serif;
       .headingContent{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         gap: 10px;
         h2{
           font-weight: 700;
-          width: 400px;
+          // width: 400px;
         }
         p{
           color: grey;
-          width: 430px;
+          // width: 430px;
         }
       }
       .buttons{
